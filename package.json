@@ -1,0 +1,30 @@
+{
+  "name": "yeewu-radar",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:setup": "node scripts/setup-db.mjs",
+    "collect": "node --experimental-strip-types scripts/collect-local.mjs",
+    "test": "node --experimental-strip-types --test tests/core.test.ts",
+    "test:db": "node --experimental-strip-types --test tests/*.int.test.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fast-xml-parser": "^5.12.1",
+    "next": "^16.4.6",
+    "postgres": "^4.1.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.11",
+    "@types/react": "^19.3.3",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^5.9.3"
+  },
+  "private": true
+}
