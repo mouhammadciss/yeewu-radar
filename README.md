@@ -16,12 +16,9 @@ Next.js 16 + Postgres (Neon), déployable sur Vercel.
 ## Mise en ligne (≈ 15 min)
 
 1. **Neon** : crée un projet (région Europe), copie la *connection string* (`...?sslmode=require`).
-2. **Base** : sur ton ordinateur, dans ce dossier :
-   ```bash
-   npm install
-   DATABASE_URL="postgres://..." npm run db:setup
-   ```
-   Le script affiche le lien privé de l'espace « Démo Télécoms Sénégal » (Orange Sénégal, Yas, Expresso).
+2. **Base** : rien à faire. Au premier démarrage, l'application crée ses tables et l'espace
+   « Démo Télécoms Sénégal » (Orange Sénégal, Yas, Expresso) ; son lien privé apparaît dans `/admin`.
+   (Alternative manuelle : `DATABASE_URL="postgres://..." npm run db:setup`.)
 3. **Vercel** : *Add New → Project*, importe le dépôt GitHub, puis dans *Environment Variables* :
    - `DATABASE_URL` : la chaîne Neon
    - `ADMIN_PASSWORD` : ton mot de passe admin
